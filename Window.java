@@ -7,7 +7,7 @@ import java.awt.event.WindowEvent;
 import java.awt.image.BufferStrategy;
 
 import javax.swing.JFrame;
-
+//commit
 public class Window {
 	 public static BufferStrategy strategy;
 	static String title = "";
@@ -26,6 +26,7 @@ public class Window {
 			  System.exit(0);
 			  }
 			  });
+		 
 		frame.addMouseListener(new MouseHandler());
 		frame.setResizable(false);
 		strategy = frame.getBufferStrategy();

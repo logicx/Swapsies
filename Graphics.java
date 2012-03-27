@@ -1,7 +1,7 @@
 import java.awt.Color;
 import java.awt.Graphics2D;
 import java.awt.MouseInfo;
-
+//commit
 public class Graphics {
 	
 	Graphics2D g;
@@ -22,9 +22,19 @@ public class Graphics {
 		while(GameState.running) {
 			
 			g = ((Graphics2D)Window.strategy.getDrawGraphics());
-			
 			paint(g);
+			ObjectHandler.removeOjects();
 			
+			if(GameState.allspawned) {
+				updateObjects();
+			}
+			
+		}
+	}
+	
+	public void updateObjects() {
+		for(Tile tile : ObjectHandler.tiles) {
+			tile.updatePos();
 		}
 	}
 	

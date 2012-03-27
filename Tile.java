@@ -3,7 +3,7 @@ import java.awt.Graphics2D;
 import java.awt.MouseInfo;
 import java.awt.Rectangle;
 import java.awt.image.BufferedImage;
-
+//commit
 public class Tile {
 	BufferedImage tileImage;
 	int x, y;
@@ -14,6 +14,14 @@ public class Tile {
 		y = y2;
 		tileImage = image;
 		
+	}
+	
+	public void updatePos() {
+		if(ObjectHandler.getTileAtPoint(x, y+38) == null){
+			if(y != 405) {
+				y += 2;
+			}
+		}
 	}
 	
 	public void draw(Graphics2D g) {
